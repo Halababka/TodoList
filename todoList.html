@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Ubuntu:wght@300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="todo-list">
+    <h1>Todo List</h1>
+    <input type="text" id="new-task" placeholder="Add new task">
+    <div class="button-group">
+        <button id="add-button" class="button-func" onclick="addTask()">Add</button>
+        <button class="button-func" onclick="deleteLast()">Delete Last</button>
+        <button class="button-func" onclick="deleteFirst()">Delete First</button>
+        <button class="button-func" onclick="toggleHighlightEven()">Highlight Even</button>
+        <button class="button-func" onclick="toggleHighlightOdd()">Highlight Odd</button>
+    </div>
+    <ul id="task-list"></ul>
+</div>
+
+<script src="script.js" type="text/javascript"></script>
+</body>
+</html>

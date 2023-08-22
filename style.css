@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu";
+    padding: 10px;
+    height: 100vh;
+    background: #24c893;
+}
+
+button:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+.button-complete, .button-func {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #006A55;
+    background: #FFFF;
+}
+
+.button-complete:hover, .button-func:hover {
+    background: #00A383;
+}
+
+input {
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid #006A55;
+    transition: outline 50ms linear;
+}
+
+input:focus, input:hover {
+    outline: 4px solid rgba(74, 141, 104, 0.5);
+}
+
+h1 {
+    padding: 20px 0;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px 10px;
+    padding: 20px 5px;
+    border: 1px solid #006A55;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+li {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: min-content;
+    text-align: center;
+    padding: 15px 10px 10px 10px;
+    border: 2px solid #24c893;
+    border-radius: 5px;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    max-width: 1200px;
+    min-width: min-content;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+}
+
+.completed {
+    text-decoration: line-through;
+    background: #afd2c0;
+}
+
+.completed .button-complete {
+    background: #ccd7d0;
+}
+
+.completed .button-complete:hover {
+    background: #00A383;
+}
+
+.even {
+    background-color: #ff6464;
+}
+
+.odd {
+    background-color: #9cdcea;
+}
+
+.button-close {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button-group button {
+    flex: 1;
+    min-width: min-content;
+}
+
+.zoom-animation {
+    transition: .05s;
+    transition-timing-function: cubic-bezier(0.08, 0.55, 0.82, 0.41)
+}
+
+.zoom-animation:hover {
+    transform: scale(1.04);
+}
+
+@media (max-width: 900px) {
+    .todo-list {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .todo-list {
+        width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        text-align: start;
+        padding: 25px;
+        flex-direction: row;
+        margin: auto;
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: .5s;
+}
+.fade-out {
+    animation-name: fadeOut;
+    animation-duration: .5s;
+}
